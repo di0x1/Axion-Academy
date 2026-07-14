@@ -1,0 +1,7 @@
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/AxionAcademyApplication.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/dto/request/CursoRequest.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/dto/response/CursoResponse.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/entity/Curso.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/enums/StatusCurso.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/repository/CursoRepository.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/service/CursoService.java

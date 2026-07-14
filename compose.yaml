@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:17
+
+    environment:
+      POSTGRES_DB: axion_academy
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - axion_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  axion_postgres_data:
