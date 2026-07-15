@@ -1,4 +1,5 @@
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/AxionAcademyApplication.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/controller/CursoController.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/dto/request/CursoRequest.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/dto/response/CursoResponse.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/entity/Curso.java
