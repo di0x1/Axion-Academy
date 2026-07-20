@@ -50,4 +50,12 @@ public class CursoController {
 
         return ResponseEntity.ok(cursoAtualizado);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> removerCurso(
+            @PathVariable long id
+    ) {
+        cursoService.removerCurso(id);
+        return ResponseEntity.noContent().build();
+    }
 }

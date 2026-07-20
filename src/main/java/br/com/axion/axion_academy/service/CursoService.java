@@ -109,5 +109,15 @@ import java.util.List;
                     cursoAtualizado.getAtualizadoEm()
             );
         }
+        public void removerCurso(Long id) {
+            Curso curso = cursoRepository.findById(id)
+                    .orElseThrow(
+                            () -> new IllegalArgumentException(
+                                    "Curso com ID" + id +" não encontrado"
+                            )
+                    );
+
+            cursoRepository.delete(curso);
+        }
 
     }

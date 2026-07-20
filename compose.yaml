@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:17
+    container_name: axion_academy_postgres
 
     environment:
       POSTGRES_DB: axion_academy
@@ -12,6 +13,32 @@ services:
 
     volumes:
       - axion_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d axion_academy"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: axion_academy_api
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/axion_academy
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+      SERVER_PORT: 8083
+
+    ports:
+      - "8083:8083"
+
+    restart: unless-stopped
 
 volumes:
   axion_postgres_data:
