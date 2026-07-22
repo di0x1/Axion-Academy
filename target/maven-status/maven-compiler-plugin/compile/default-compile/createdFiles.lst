@@ -2,7 +2,11 @@ br/com/axion/axion_academy/entity/Curso.class
 br/com/axion/axion_academy/repository/CursoRepository.class
 br/com/axion/axion_academy/AxionAcademyApplication.class
 br/com/axion/axion_academy/dto/response/CursoResponse.class
+br/com/axion/axion_academy/exeption/CursoDuplicadoException.class
+br/com/axion/axion_academy/dto/request/CursoRequest.class
+br/com/axion/axion_academy/exeption/GlobalExceptionHandler.class
+br/com/axion/axion_academy/exeption/CursoNaoEncontradoException.class
+br/com/axion/axion_academy/dto/response/ErroResponse.class
 br/com/axion/axion_academy/controller/CursoController.class
 br/com/axion/axion_academy/enums/StatusCurso.class
-br/com/axion/axion_academy/dto/request/CursoRequest.class
 br/com/axion/axion_academy/service/CursoService.class

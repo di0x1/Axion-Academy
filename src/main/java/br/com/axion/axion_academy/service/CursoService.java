@@ -2,6 +2,8 @@ package br.com.axion.axion_academy.service;
 import br.com.axion.axion_academy.dto.request.CursoRequest;
 import br.com.axion.axion_academy.dto.response.CursoResponse;
 import br.com.axion.axion_academy.entity.Curso;
+import br.com.axion.axion_academy.exeption.CursoDuplicadoException;
+import br.com.axion.axion_academy.exeption.CursoNaoEncontradoException;
 import br.com.axion.axion_academy.repository.CursoRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -19,7 +21,7 @@ import java.util.List;
                     cursoRepository.existsByTituloIgnoreCase(request.getTitulo());
 
             if (tituloJaExiste) {
-                throw new IllegalArgumentException(
+                throw new CursoDuplicadoException(
                         "Já existe um curso com esse título."
                 );
             }
@@ -61,7 +63,7 @@ import java.util.List;
         public CursoResponse buscarPorId(Long id) {
             Curso curso = cursoRepository.findById(id)
                     .orElseThrow(
-                            () -> new IllegalArgumentException(
+                            () -> new CursoNaoEncontradoException(
                                     "Curso com ID" + id + "não encontrado."
                             )
                     );
@@ -81,7 +83,7 @@ import java.util.List;
 
             Curso curso = cursoRepository.findById(id)
                     .orElseThrow(
-                            () -> new IllegalArgumentException(
+                            () -> new CursoNaoEncontradoException(
                                     "Curso com o ID" + id + "não encontrado."
                             )
                     );
@@ -90,7 +92,7 @@ import java.util.List;
             boolean tituloJaUsado =
                     cursoRepository.existsByTituloIgnoreCaseAndIdNot(tituloLimpo, id);
             if (tituloJaUsado) {
-                throw new IllegalArgumentException(
+                throw new CursoDuplicadoException(
                         "Ja existe outro curso com esse titulo."
                 );
             }
@@ -112,7 +114,7 @@ import java.util.List;
         public void removerCurso(Long id) {
             Curso curso = cursoRepository.findById(id)
                     .orElseThrow(
-                            () -> new IllegalArgumentException(
+                            () -> new CursoNaoEncontradoException(
                                     "Curso com ID" + id +" não encontrado"
                             )
                     );

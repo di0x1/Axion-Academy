@@ -2,7 +2,11 @@
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/controller/CursoController.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/dto/request/CursoRequest.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/dto/response/CursoResponse.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/dto/response/ErroResponse.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/entity/Curso.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/enums/StatusCurso.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/exeption/CursoDuplicadoException.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/exeption/CursoNaoEncontradoException.java
+/home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/exeption/GlobalExceptionHandler.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/repository/CursoRepository.java
 /home/iujix/Downloads/Axion-Academy/src/main/java/br/com/axion/axion_academy/service/CursoService.java
